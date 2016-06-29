@@ -21,7 +21,7 @@
     <interface_groups/> 
   </permissions> 
   <phrases> 
-    <phrase title="permission_forum_viewStaff" version_id="1000000" version_string="1.0.0"><![CDATA[Time limit on deleting own messages (minutes)]]></phrase>
+    <phrase title="permission_forum_deleteOwnPostTimeLimit" version_id="1000000" version_string="1.0.0"><![CDATA[Time limit on deleting own messages (minutes)]]></phrase>
   </phrases> 
   <route_prefixes/>
   <style_properties/>
