@@ -4,6 +4,8 @@ class SV_PostDeleteTimeLimit_XenForo_Model_Post extends XFCP_SV_PostDeleteTimeLi
 {
     public function canDeletePost(array $post, array $thread, array $forum, $deleteType = 'soft', &$errorPhraseKey = '', array $nodePermissions = null, array $viewingUser = null)
     {
+        $this->standardizeViewingUserReferenceForNode($thread['node_id'], $viewingUser, $nodePermissions);
+
         $ret = parent::canDeletePost($post, $thread, $forum, $deleteType, $errorPhraseKey, $nodePermissions, $viewingUser);
         if (!$ret ||
             ($post['post_id'] == $thread['first_post_id'] && XenForo_Permission::hasContentPermission($nodePermissions, 'deleteAnyThread')) ||
